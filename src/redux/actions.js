@@ -1,6 +1,7 @@
 import { ADD_TODO } from "./actionTypes";
 import { TOGGLE_TODO } from "./actionTypes";
 import { REMOVE_TODO } from "./actionTypes";
+import { MARK_COMPLETED } from "./actionTypes";
 
 export const addTodo = (text) => ({
     type: ADD_TODO,
@@ -14,5 +15,10 @@ export const toggleTodo = (id) => ({
 
 export const removeTodo = (id) => ({
     type: REMOVE_TODO,
+    payload: {id}
+})
+
+export const markCompleted = (id) => ({
+    type: MARK_COMPLETED,
     payload: {id}
 })

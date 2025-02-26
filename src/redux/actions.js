@@ -1,11 +1,14 @@
-import { ADD_TODO } from "./actionTypes";
-import { TOGGLE_TODO } from "./actionTypes";
-import { REMOVE_TODO } from "./actionTypes";
-import { MARK_COMPLETED } from "./actionTypes";
-import { MARK_INCOMPLETED } from "./actionTypes";
-import { FILTER_TODO } from "./actionTypes";
-import { MARK_ALL_COMPLETED } from "./actionTypes";
-import { UPDATA_SEARCH_TERM } from "./actionTypes";
+import {
+  ADD_TODO,
+  TOGGLE_TODO,
+  REMOVE_TODO,
+  MARK_COMPLETED,
+  MARK_INCOMPLETED,
+  FILTER_TODO,
+  MARK_ALL_COMPLETED,
+  UPDATA_SEARCH_TERM,
+} from "./actionTypes";
+
 
 
 export const addTodo = (text) => ({

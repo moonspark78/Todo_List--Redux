@@ -7,17 +7,16 @@ const initialState = {
 
 }
 
-const totalReducer = (state = initialState, action) => {
+const todoReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TODO:
             return {
-                ...state,
-                todos: [...state.todos, action.payload]
+                todos: [...state.todos, {text: action.payload.text, completed: true}]
             }
         
             default:
-                return state;
+                break;
     }
 };
 
-export default totalReducer;
+export default todoReducer;

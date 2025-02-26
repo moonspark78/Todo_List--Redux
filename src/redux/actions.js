@@ -4,6 +4,8 @@ import { REMOVE_TODO } from "./actionTypes";
 import { MARK_COMPLETED } from "./actionTypes";
 import { MARK_INCOMPLETED } from "./actionTypes";
 import { FILTER_TODO } from "./actionTypes";
+import { MARK_ALL_COMPLETED } from "./actionTypes";
+
 
 export const addTodo = (text) => ({
     type: ADD_TODO,
@@ -30,7 +32,12 @@ export const markIncompleted = (id) => ({
     payload: {id}
 })
 
-export const filterTodos = (id) => ({
+export const filterTodos = (filter) => ({
     type: FILTER_TODO,
-    payload: {id}
+    payload: {filter}
+})
+
+export const markAllCompleted = () => ({
+    type: MARK_ALL_COMPLETED,
+    payload: {}
 })

@@ -5,6 +5,7 @@ import { MARK_COMPLETED } from "./actionTypes";
 import { MARK_INCOMPLETED } from "./actionTypes";
 import { FILTER_TODO } from "./actionTypes";
 import { MARK_ALL_COMPLETED } from "./actionTypes";
+import { UPDATA_SEARCH_TERM } from "./actionTypes";
 
 
 export const addTodo = (text) => ({
@@ -41,3 +42,9 @@ export const markAllCompleted = () => ({
     type: MARK_ALL_COMPLETED,
     payload: {}
 })
+
+export const updateSearchTerm = (searchTerm) => ({
+    type: UPDATA_SEARCH_TERM,
+    payload: {searchTerm}
+})
+

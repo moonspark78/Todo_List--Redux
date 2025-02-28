@@ -3,7 +3,7 @@ import {
   TOGGLE_TODO,
   REMOVE_TODO,
   MARK_COMPLETED,
-  MARK_INCOMPLETED,
+  MARK_INCOMPLETE,
   FILTER_TODO,
   MARK_ALL_COMPLETED,
   UPDATA_SEARCH_TERM,
@@ -32,7 +32,7 @@ export const markCompleted = (id) => ({
 })
 
 export const markIncompleted = (id) => ({
-    type: MARK_INCOMPLETED,
+    type: MARK_INCOMPLETE,
     payload: {id}
 })
 

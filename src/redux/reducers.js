@@ -1,4 +1,4 @@
-import { ADD_TODO, MARK_COMPLETED, REMOVE_TODO, TOGGLE_TODO, MARK_INCOMPLETE, FILTER_TODO } from "./actionTypes";
+import { ADD_TODO, MARK_COMPLETED, REMOVE_TODO, TOGGLE_TODO, MARK_INCOMPLETE, FILTER_TODO, UPDATA_SEARCH_TERM } from "./actionTypes";
 
 const initialState = {
     todos: [],
@@ -48,6 +48,12 @@ const todoReducer = (state = initialState, action) => {
                 todos: state.todos,
                 filter: action.payload.filter,
                 searchTerm: state.searchTerm,
+            }
+        case UPDATA_SEARCH_TERM:
+            return{
+                todos: state.todos,
+                filter: state.filter,
+                searchTerm: action.payload.searchTerm,
             }
         
             default:

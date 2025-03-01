@@ -12,9 +12,10 @@ const Todo = () => {
           name="addTodoInput"
           id="addTodoInput"
           placeholder="Add todo"
-          className="flex"
+          className="flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500"
         />
-        <button>
+        <button
+        className="ml-4 p-2 bg-blue-500 text-white hover:bg-blue-600 rounded">
           <BsPlus />
         </button>
       </div>

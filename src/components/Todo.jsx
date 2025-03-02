@@ -1,13 +1,23 @@
 import { BsPlus } from "react-icons/bs";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../redux/actions";
 
 const Todo = () => {
+  const dispatch = useDispatch();
   const [newTodoText, setNewTodoText] = useState("");
   console.log(newTodoText);
 
-  const handleAddTodo = () => {};
-  
-  const handleAddTodoClick = () => {};
+  const handleAddTodo = (text) => {
+    dispatch(addTodo(text))
+  };
+
+  const handleAddTodoClick = () => {
+    if(newTodoText.trim() !== ""){
+      handleAddTodo(newTodoText.trim());
+      setNewTodoText("");
+    }
+  };
   
   return (
     <div className="max-w-4xl mx-auto sm:mt-8 p-4 bg-gray-100 rounded-lg">
@@ -32,7 +42,7 @@ const Todo = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Todo
+export default Todo;

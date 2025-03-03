@@ -1,7 +1,7 @@
-import { BsPlus } from "react-icons/bs";
+import { BsPlus, BsSearch } from "react-icons/bs";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../redux/actions";
+import { addTodo, updateSearchTerm } from "../redux/actions";
 
 const Todo = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,10 @@ const Todo = () => {
     }
   };
 
-  
+  const handleSearchChange = (value) =>{
+    setSearchTerm(value);
+    dispatch(updateSearchTerm(value));
+  }
   
   return (
     <div className="max-w-4xl mx-auto sm:mt-8 p-4 bg-gray-100 rounded-lg">
@@ -50,13 +53,18 @@ const Todo = () => {
         <div className="flex items-center mb-4">
           <input 
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
             type="text"
             name="searchTodoInput"
             id="searchTodoInput"
-            placeholder="Search todo"
+            placeholder="Search todo . . ."
             className="flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500"
           />
+        <button
+          className="ml-4 p-2 bg-blue-500 text-white hover:bg-blue-600 rounded"
+        >
+          <BsSearch />
+        </button>
         </div>
       </div>
     </div>

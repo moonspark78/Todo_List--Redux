@@ -2,6 +2,7 @@ import { BsPlus, BsSearch } from "react-icons/bs";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo, updateSearchTerm } from "../redux/actions";
+import FilterButton from "./FilterButton";
 
 const Todo = () => {
   const dispatch = useDispatch();
@@ -50,6 +51,7 @@ const Todo = () => {
 
       {/* filter & search input */}
       <div>
+        <FilterButton/>
         <div className="flex items-center mb-4">
           <input 
             value={searchTerm}

@@ -50,7 +50,7 @@ const Todo = () => {
       </div>
 
       {/* filter & search input */}
-      <div>
+      <div className="flex items-center justify-between">
         <FilterButton/>
         <div className="flex items-center mb-4">
           <input 
@@ -60,7 +60,7 @@ const Todo = () => {
             name="searchTodoInput"
             id="searchTodoInput"
             placeholder="Search todo . . ."
-            className="flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500"
+            className="flex-grow p-2 border-b-2 border-gray-300 bg-white focus:outline-none focus:border-blue-500"
           />
         <button
           className="ml-4 p-2 bg-blue-500 text-white hover:bg-blue-600 rounded"

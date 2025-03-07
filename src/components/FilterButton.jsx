@@ -8,6 +8,8 @@ const FilterButton = () => {
             <option value="COMPLETED">Completed</option>
             <option value="INCOMPLETE">Incomplete</option>
         </select>
+
+        <button>Mark All Completed</button>
     </div>
   )
 }

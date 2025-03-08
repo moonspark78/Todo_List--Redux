@@ -18,7 +18,15 @@ const TodoList = () => {
 
   console.log("Filtered Todos",filteredTodos)
   return (
-    <div>TodoList</div>
+    <ul>
+      <li>
+        {
+          filteredTodos.map((todo, index)=>(
+            <li key={index}>{todo.text}</li>
+          ))
+        }
+      </li>
+    </ul>
   )
 }
 

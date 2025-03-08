@@ -16,7 +16,7 @@ const TodoList = () => {
 
   })
 
-
+  console.log("Filtered Todos",filteredTodos)
   return (
     <div>TodoList</div>
   )

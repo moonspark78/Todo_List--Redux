@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import TodoItem from "./TodoItem";
 
 
 const TodoList = () => {
@@ -22,7 +23,7 @@ const TodoList = () => {
       <li>
         {
           filteredTodos.map((todo, index)=>(
-            <li key={index}>{todo.text}</li>
+            <TodoItem key={index} todo={todo} index={index}/>
           ))
         }
       </li>

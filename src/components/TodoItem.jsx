@@ -1,3 +1,13 @@
+import PropTypes from 'prop-types';
+
+// Ajout de la validation des props
+TodoItem.propTypes = {
+    index: PropTypes.number.isRequired,
+    todo: PropTypes.shape({
+      completed: PropTypes.bool.isRequired,
+      text: PropTypes.string.isRequired,
+    }).isRequired,
+  };
 
 
 const TodoItem = ({todo, index}) => {

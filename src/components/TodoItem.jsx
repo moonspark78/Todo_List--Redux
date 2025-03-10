@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {} from 'react-icons';
 import { FaCheck, FaToggleOff, FaToggleOn } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { toggleTodo } from '../redux/actions';
+import { toggleTodo, markCompleted } from '../redux/actions';
 
 const TodoItem = ({todo, index}) => {
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ const TodoItem = ({todo, index}) => {
                     {todo.completed ? <FaToggleOff/> : <FaToggleOn/>}
             </button>
             <button
+              onClick={() => dispatch(markCompleted(index))}
               className='mr-2 text-sm bg-blue-500 text-white sm:px-2 py-1 rounded'
             >
                 <FaCheck/>

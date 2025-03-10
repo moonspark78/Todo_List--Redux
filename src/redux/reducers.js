@@ -50,7 +50,7 @@ const todoReducer = (state = initialState, action) => {
     case MARK_INCOMPLETE:
       return {
         todos: state.todos.map((todo, index) => 
-          index === action.payload.id ? { ...todo, completed: true } : todo
+          index === action.payload.id ? { ...todo, completed: false } : todo
         ),
         filter: state.filter,
         searchTerm: state.searchTerm,
